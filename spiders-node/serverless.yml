@@ -35,9 +35,21 @@ functions:
       - http:
           method: get
           path: test
-  match:
-    handler: src/match.score
+  team:
+    handler: src/team.ctcl
     events:
       - http:
           method: get
-          path: score
+          path: ctcl
+  players:
+    handler: src/players.launchers
+    events:
+      - http:
+          method: get
+          path: launchers
+  australia:
+    handler: src/australia.playingXI
+    events:
+      - http:
+          method: get
+          path: playingXI             
